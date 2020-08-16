@@ -1,16 +1,52 @@
 {
 	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
 		{
+		    "path" : "pages/test-page/test-page",
+		    "style" : {
+				"navigationBarTitleText":"test-page设置导航栏标题文字内容",
+				"h5":{
+					"titleNView":{
+						//"backgroundColor":"#4CD964",
+						"titleColor":"yellow"
+					}
+				}
+			}
+		},
+		{
 			"path": "pages/index/index",
 			"style": {
 				"navigationBarTitleText": "uni-app"
 			}
 		}
-	],
+    ],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
 		"navigationBarTitleText": "uni-app",
-		"navigationBarBackgroundColor": "#F8F8F8",
-		"backgroundColor": "#F8F8F8"
+		"navigationBarBackgroundColor": "red",
+		"backgroundColor": "#F8F8F8",
+		"h5":{},
+		"mp-weixin":{}
+	},
+	"tabBar":{
+		"color":"#333",
+		"selectedColor":"#007AFF",
+		"backgroundColor":"#f5f5f5",
+		"list":[
+			{
+				"pagePath":"pages/index/index",
+				"text":"home",
+				"iconPath":"static/collect.png",
+				"selectedIconPath":"static/collected.png"
+			},
+			{
+				"pagePath":"pages/test-page/test-page",
+				"text":"page",
+				"iconPath":"static/like.png",
+				"selectedIconPath":"static/liked.png"
+			}
+		]
 	}
 }
+
+// tabBar list 最多5个 最少2个 显示一次就会保存到内存中 onshow
+// 有些属性不会生效,需要看对应的文档
