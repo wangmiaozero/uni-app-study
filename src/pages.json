@@ -18,6 +18,14 @@
 				"navigationBarTitleText": "uni-app"
 			}
 		}
+        ,{
+            "path" : "pages/page/page",
+            "style" : {}
+        }
+        ,{
+            "path" : "pages/page2/page2",
+            "style" : {}
+        }
     ],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
