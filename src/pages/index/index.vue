@@ -1,7 +1,11 @@
 <template>
-	<view class="content">
-		<image class="logo" src="/static/logo.png" mode="aspectFit"></image>
+		<!-- :class="content" -->
+		<!-- :class="['background','content']" -->
+		<!-- :class="{'background':isShow}" -->
+	<view :class="['background','content']">
+		<image class="logo" src="/static/logo.png"   mode="aspectFit"></image>
 		<view>
+			
 			<text class="title">{{title}}</text>
 		</view>
 		<button @click="henledOpen">去往page</button>
@@ -14,7 +18,10 @@
 	export default {
 		data() {
 			return {
-				title: 'Hello'
+				title: 'Hello',
+				content:'content',
+				background:'background',
+				isShow:false
 			}
 		},
 		// 页面加载
@@ -78,11 +85,24 @@
 </script>
 
 <style>
+	/* 
+	
+	 设计稿 750px  100px
+	 750*100/750 =100rpx
+	 
+	 设计稿 640px 100px
+	 750*100/640 =117rpx
+	 
+	 */
+	
 	.content {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
+	}
+	.background{
+		background-color: #007AFF;
 	}
 
 	.logo {
