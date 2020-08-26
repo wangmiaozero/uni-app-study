@@ -10,14 +10,22 @@
 		</view>
 		<button @click="henledOpen">去往page</button>
 		<navigator url="../page/page">组件跳转-跟小程序一样</navigator>
+		<button type="primary" @click="hanledgetSystemInfo">getSystemInfo</button>
+		<button @click="henledGetsytemInfoSync">getSystemInfoSync</button>
+		<list v-for="(item,index) in list" :key="index" :name="item" @onClick="onClick"></list>
 	</view>
 	<!-- mode="aspectFit" 保持纵横比缩放图片 -->
 </template>
 
 <script>
+	import list from '@/components/list.vue'
 	export default {
+		components:{
+			list
+		},
 		data() {
 			return {
+				list:['uni-app','vue','wechat'],
 				title: 'Hello',
 				content:'content',
 				background:'background',
@@ -79,6 +87,22 @@
 				uni.switchTab({
 					url:'../test-page/test-page'
 				})
+			},
+			hanledgetSystemInfo(){
+				// 获取设备信息
+				uni.getSystemInfo({
+						success(e){
+							console.log(e)
+						}
+				})
+			},
+			henledGetsytemInfoSync(){
+				// 获取头部信息
+			  let info = uni.getSystemInfoSync();
+			  console.log(info)
+			},
+			onClick(row){
+				console.log(row)
 			}
 		}
 	}
