@@ -1,0 +1,23 @@
+:root {
+	/* 白天 */
+	--white-back-color: #EBECF0;
+	--white-text-color: #A2B1CA;
+	--white-title-color: #6C7A92;
+	--white-shadow-color: 0, 0, 0;
+	--white-light-color: 255, 255, 255;
+	--white-border-active-color: #EEE;
+	--white-main-action-left: #779DFF;
+	--white-main-action-right: #9EB8FF;
+	--white-background-color: #ddd;
+	--color: #779DFF;
+	/* 晚上 */
+	--black-back-color: #2E3237;
+	--black-text-color: #707174;
+	--black-title-color: #A7A9AA;
+	--black-shadow-color: 0, 0, 0;
+	--black-light-color: 80, 80, 80;
+	--black-border-active-color: #444;
+	--black-main-action-left: #D43C0B;
+	--black-main-action-right: #BF8A10;
+	--black-background-color: #26282B;
+}
